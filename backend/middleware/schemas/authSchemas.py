@@ -1,4 +1,4 @@
-from schema import ma
+from finance_managment_app.backend.schema import ma
 from marshmallow import fields
 
 class User(ma.Schema):
