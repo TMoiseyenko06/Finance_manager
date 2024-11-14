@@ -1,4 +1,4 @@
-from finance_managment_app.backend.schema import ma
+from schema import ma
 from marshmallow import fields
 
 class User(ma.Schema):
@@ -9,3 +9,11 @@ class User(ma.Schema):
         fields = ('username', 'password')
 
 user_auth_schema = User() 
+
+class exchange(ma.Schema):
+    public_token = fields.String(required=True)
+    test = fields.String(required=False)
+    class Meta():
+        fields = ('public_token','test')
+
+exchange_schema = exchange()
